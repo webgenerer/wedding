@@ -1855,37 +1855,37 @@ underline;
         </div>
       </div>
       <div class="section single-column-section split-layout image-on-left hidden" data-section-behavior="storybook-split-layout" data-layer="0" data-layer-name="over" style="transform: translate3d(0px, 613px, 0px); z-index: 1;">
-        <div class="section-content-view">
-	      <div class="content-container">
-	        <h3 class="text-center">
-	          <span class="heading-content-wrapper">
-	            <a class="page-heading-anchor" title="Copy anchor link" id="page-content-foto-und-video-upload" href="#foto-und-video-upload" aria-label="Copy anchor link" aria-describedby="page-content-foto-und-video-upload-heading-text"></a>
-	            <span id="page-content-foto-und-video-upload-heading-text" class="heading-text">Foto- und Video-Upload</span>
-	          </span>
-	        </h3>
-	        <h4 class="text-center">
-	          <span class="heading-content-wrapper">
-	            <a class="page-heading-anchor" title="Copy anchor link" id="page-content-lade-deine-fotos-und-videos-hoch" href="#lade-deine-fotos-und-videos-hoch" aria-label="Copy anchor link" aria-describedby="page-content-lade-deine-fotos-und-videos-hoch-heading-text"></a>
-	            <span id="page-content-lade-deine-fotos-und-videos-hoch-heading-text" class="heading-text">Lade deine Fotos und Videos hoch und sieh dir die hochgeladenen Dateien an</span>
-	          </span>
-	        </h4>
-	        <p class="text-center">Bitte lade deine Fotos und Videos von der Hochzeit hoch, damit wir sie alle genießen können. Du kannst JPEG, PNG, MP4, AVI und MOV Dateien hochladen.</p>
-	        <div class="link-button-wrapper link-center">
-	          <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
-	            <input type="file" name="file" accept=".jpg,.jpeg,.png,.mp4,.avi,.mov" multiple>
-	            <input type="submit" value="Hochladen">
-	          </form>
+	    <div class="section-content-view">
+	        <div class="content-container">
+	            <h3 class="text-center">
+	                <span class="heading-content-wrapper">
+	                    <a class="page-heading-anchor" title="Copy anchor link" id="page-content-foto-und-video-upload" href="#foto-und-video-upload" aria-label="Copy anchor link" aria-describedby="page-content-foto-und-video-upload-heading-text"></a>
+	                    <span id="page-content-foto-und-video-upload-heading-text" class="heading-text">Foto- und Video-Upload</span>
+	                </span>
+	            </h3>
+	            <h4 class="text-center">
+	                <span class="heading-content-wrapper">
+	                    <a class="page-heading-anchor" title="Copy anchor link" id="page-content-lade-deine-fotos-und-videos-hoch" href="#lade-deine-fotos-und-videos-hoch" aria-label="Copy anchor link" aria-describedby="page-content-lade-deine-fotos-und-videos-hoch-heading-text"></a>
+	                    <span id="page-content-lade-deine-fotos-und-videos-hoch-heading-text" class="heading-text">Lade deine Fotos und Videos hoch und sieh dir die hochgeladenen Dateien an</span>
+	                </span>
+	            </h4>
+	            <p class="text-center">Bitte lade deine Fotos und Videos von der Hochzeit hoch, damit wir sie alle genießen können. Du kannst JPEG, PNG, MP4, AVI und MOV Dateien hochladen.</p>
+	            <div class="link-button-wrapper link-center">
+	                <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+	                    <input type="file" name="file" accept=".jpg,.jpeg,.png,.mp4,.avi,.mov" multiple>
+	                    <input type="submit" value="Hochladen">
+	                </form>
+	            </div>
+	            {% if success %}
+	                <div class="message success" style="text-align: center; color: green;">Vielen Dank, dass du deine Fotos und Videos mit uns teilst! Deine Dateien wurden erfolgreich hochgeladen.</div>
+	            {% elif error %}
+	                <div class="message error" style="text-align: center; color: red;">Es gab einen Fehler: {{ error }}</div>
+	            {% endif %}
+	            <p class="text-center">Du kannst die hochgeladenen Fotos und Videos in unserem <a href="https://drive.google.com/drive/folders/1hxPrYtWRXgF6eZEHYsbvU_CLPFIx2hzh" target="_blank">Google Drive Ordner</a> ansehen.</p>
 	        </div>
-	        {% if success %}
-	          <blockquote class="text-center" style="color: green;">Vielen Dank, dass du deine Fotos und Videos mit uns teilst! Deine Dateien wurden erfolgreich hochgeladen.</blockquote>
-	        {% elif error %}
-	          <blockquote class="text-center" style="color: red;">Es gab einen Fehler: {{ error }}</blockquote>
-	        {% endif %}
-	        <p class="text-center">Du kannst die hochgeladenen Fotos und Videos in unserem <a href="https://drive.google.com/drive/folders/1hxPrYtWRXgF6eZEHYsbvU_CLPFIx2hzh" target="_blank">Google Drive Ordner</a> ansehen.</p>
-	      </div>
-    	</div>
-
-      </div>
+	    </div>
+	</div>
+			
       <div class="section spacer-section content-spacer bottom-shadow hidden" data-section-behavior="storybook-spacer" data-layer-name="over" style="transform: translate3d(0px, 613px, 0px); z-index: 1;">
       </div>
       <div class="section card-flipbook-section hidden" data-section-behavior="storybook-column-overlay" data-spacing=".75" data-layer="-1" data-layer-name="under" style="transform: translate3d(0px, 613px, 0px); z-index: 0;">
